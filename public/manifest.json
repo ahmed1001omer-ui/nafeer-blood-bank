@@ -1,0 +1,30 @@
+{
+  "name": "نظام إدارة بنك الدم المركزي - نفير",
+  "short_name": "نفير بنك الدم",
+  "description": "تطبيق مكتبي متكامل لإدارة بنك الدم والمستشفى، الاستقبال، المختبر، والمخزون",
+  "start_url": "/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#0B0F19",
+  "theme_color": "#DC2626",
+  "icons": [
+    {
+      "src": "/icon.png?v=2",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/app-icon.png?v=2",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.svg?v=2",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["medical", "health", "productivity", "utilities"]
+}

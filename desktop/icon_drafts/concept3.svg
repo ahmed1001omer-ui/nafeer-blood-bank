@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1024" height="1024">
+  <defs>
+    <linearGradient id="dropGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E" />
+      <stop offset="100%" stop-color="#BE123C" />
+    </linearGradient>
+    <linearGradient id="chassisGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+
+  <!-- Modern Clean Monitor Base -->
+  <rect x="160" y="420" width="192" height="26" rx="13" fill="#0F172A" />
+  <!-- Stand Neck -->
+  <path d="M 224 340 L 288 340 L 298 424 L 214 424 Z" fill="#1E293B" />
+
+  <!-- Main Monitor Body (Deep Midnight Navy) -->
+  <rect x="48" y="52" width="416" height="296" rx="26" ry="26" fill="url(#chassisGrad)" />
+  
+  <!-- Screen Recess (Dark Slate Blue) -->
+  <rect x="68" y="70" width="376" height="244" rx="14" ry="14" fill="#090E17" />
+
+  <!-- Upper Navigation / Status Row -->
+  <line x1="88" y1="102" x2="424" y2="102" stroke="#1E293B" stroke-width="2.5" />
+  <circle cx="100" cy="88" r="5" fill="#38BDF8" />
+  <circle cx="116" cy="88" r="5" fill="#64748B" />
+  <circle cx="132" cy="88" r="5" fill="#64748B" />
+
+  <!-- Left: Stylized Blood Inventory Analytics Bars -->
+  <rect x="98" y="212" width="22" height="66" rx="5" fill="#38BDF8" />
+  <rect x="130" y="172" width="22" height="106" rx="5" fill="#0284C7" />
+  <rect x="162" y="136" width="22" height="142" rx="5" fill="#2563EB" />
+  
+  <!-- Upward Trend Line -->
+  <path d="M 100 200 L 140 156 L 174 126 L 206 148" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="206" cy="148" r="5" fill="#38BDF8" stroke="#FFFFFF" stroke-width="2" />
+
+  <!-- Right: Prominent Medical Blood Drop -->
+  <path d="M 334 116 C 334 116 266 208 266 252 C 266 292 296 318 334 318 C 372 318 402 292 402 252 C 402 208 334 116 334 116 Z" fill="url(#dropGrad3)" />
+
+  <!-- Crisp White Vital Life Sign (Pulse) inside the Droplet -->
+  <path d="M 284 254 L 310 254 L 322 222 L 338 284 L 350 240 L 360 254 L 384 254" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Clean Curved Highlight on Droplet -->
+  <path d="M 298 224 C 290 238 290 256 295 268" fill="none" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" opacity="0.65" />
+</svg>

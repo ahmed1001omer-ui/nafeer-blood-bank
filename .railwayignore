@@ -1,0 +1,35 @@
+# Keep secrets, production data, and local build output out of deployment uploads.
+.env
+.env.*
+!.env.example
+*.db
+*.db-*
+*.tar
+.codex-backups/
+.next/
+**/.next/
+node_modules/
+**/node_modules/
+tsconfig.tsbuildinfo
+.git/
+.vercel/
+rendered_sample/
+rendered_wireframes/
+Nafeer_UML_Diagrams/
+uml/
+draft_assets/
+lab/
+*.bak*
+
+# Ignore root screenshots and heavy non-production files
+[0-9]*.png
+*.mdj
+desktop/
+
+# NEVER ignore public static web assets (images, animations, logos)
+!public/
+!public/**
+
+# Include only the empty schema fixture needed during Next.js build.
+!data/
+!data/blood-bank-test.db

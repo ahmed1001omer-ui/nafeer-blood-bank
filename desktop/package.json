@@ -1,0 +1,33 @@
+{
+  "name": "nafeer-blood-bank-desktop",
+  "version": "2.1.0",
+  "description": "Desktop Application for Nafeer Blood Bank Management System",
+  "main": "main.js",
+  "author": "Ahmed Omer",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "org.nafeer.bloodbank.desktop",
+    "productName": "نظام بنك الدم المركزي - نفير",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "../public/app-icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "نظام إدارة بنك الدم - نفير"
+    }
+  }
+}

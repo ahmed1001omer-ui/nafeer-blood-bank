@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1024" height="1024">
+  <defs>
+    <linearGradient id="dropGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF334B" />
+      <stop offset="100%" stop-color="#B91C1C" />
+    </linearGradient>
+    <linearGradient id="screenGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141E33" />
+      <stop offset="100%" stop-color="#0B1120" />
+    </linearGradient>
+    <linearGradient id="frameGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+
+  <!-- Monitor Stand Base -->
+  <path d="M 160 416 L 352 416 C 362 416 370 422 370 430 C 370 438 362 444 352 444 L 160 444 C 150 444 142 438 142 430 C 142 422 150 416 160 416 Z" fill="#0F172A" />
+  <!-- Stand Neck -->
+  <path d="M 226 348 L 286 348 L 298 424 L 214 424 Z" fill="#1E293B" />
+  
+  <!-- Monitor Outer Frame (Deep Navy) -->
+  <rect x="44" y="56" width="424" height="298" rx="28" ry="28" fill="url(#frameGrad1)" />
+  
+  <!-- Screen Area -->
+  <rect x="62" y="74" width="388" height="248" rx="16" ry="16" fill="url(#screenGrad1)" />
+
+  <!-- Top Window Header Line / Dots -->
+  <circle cx="90" cy="94" r="5" fill="#38BDF8" opacity="0.8" />
+  <circle cx="106" cy="94" r="5" fill="#64748B" opacity="0.6" />
+  <circle cx="122" cy="94" r="5" fill="#64748B" opacity="0.6" />
+  <line x1="80" y1="110" x2="432" y2="110" stroke="#1E293B" stroke-width="2" />
+
+  <!-- Management Analytics Bars (Left side) -->
+  <rect x="96" y="210" width="24" height="72" rx="6" fill="#38BDF8" />
+  <rect x="132" y="174" width="24" height="108" rx="6" fill="#0284C7" />
+  <rect x="168" y="142" width="24" height="140" rx="6" fill="#3B82F6" />
+  
+  <!-- Trend Analytics Line -->
+  <path d="M 96 200 L 140 162 L 180 130 L 220 165" fill="none" stroke="#F8FAFC" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="220" cy="165" r="5.5" fill="#38BDF8" stroke="#FFFFFF" stroke-width="2" />
+
+  <!-- Divider Line -->
+  <line x1="244" y1="130" x2="244" y2="288" stroke="#1E293B" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Blood Droplet (Right side) -->
+  <!-- Drop Path: tip at (342, 134), belly down to (342, 286) -->
+  <path d="M 342 134 C 342 134 286 210 286 248 C 286 280 311 300 342 300 C 373 300 398 280 398 248 C 398 210 342 134 342 134 Z" fill="url(#dropGrad1)" />
+
+  <!-- Vital Pulse Line across Blood Droplet -->
+  <path d="M 302 248 L 324 248 L 334 224 L 348 270 L 358 238 L 366 248 L 382 248" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Subtle Droplet Specular Reflection -->
+  <path d="M 314 222 C 308 232 308 246 312 254" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+</svg>

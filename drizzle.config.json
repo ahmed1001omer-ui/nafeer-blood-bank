@@ -1,0 +1,7 @@
+{
+  "dialect": "turso",
+  "schema": "./src/db/schema.ts",
+  "dbCredentials": {
+    "url": "file:blood-bank-test.db"
+  }
+}

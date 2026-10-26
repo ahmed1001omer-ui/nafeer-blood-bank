@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1024" height="1024">
+  <defs>
+    <linearGradient id="dropGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#991B1B" />
+    </linearGradient>
+    <linearGradient id="screenGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+  </defs>
+
+  <!-- Modern Stand Base -->
+  <rect x="172" y="426" width="168" height="24" rx="12" fill="#0F172A" />
+  <path d="M 232 358 L 280 358 L 290 430 L 222 430 Z" fill="#1E293B" />
+
+  <!-- Monitor Frame -->
+  <rect x="52" y="66" width="408" height="296" rx="26" ry="26" fill="#0F172A" />
+  <!-- Screen Inset -->
+  <rect x="70" y="84" width="372" height="246" rx="16" ry="16" fill="url(#screenGrad2)" />
+
+  <!-- Minimalist Background Dashboard UI Grid -->
+  <!-- Top bar indicators -->
+  <rect x="94" y="104" width="60" height="8" rx="4" fill="#1E293B" />
+  <rect x="162" y="104" width="40" height="8" rx="4" fill="#1E293B" />
+  <circle cx="414" cy="108" r="6" fill="#10B981" />
+  <circle cx="396" cy="108" r="6" fill="#38BDF8" />
+
+  <!-- Left Mini Chart (Inventory status) -->
+  <rect x="94" y="184" width="16" height="56" rx="4" fill="#1E3A8A" opacity="0.7" />
+  <rect x="118" y="156" width="16" height="84" rx="4" fill="#1E40AF" opacity="0.8" />
+  <rect x="142" y="132" width="16" height="108" rx="4" fill="#2563EB" opacity="0.9" />
+
+  <!-- Right Mini Data Rows -->
+  <rect x="354" y="148" width="64" height="8" rx="4" fill="#1E293B" />
+  <rect x="370" y="166" width="48" height="8" rx="4" fill="#1E293B" />
+  <rect x="344" y="184" width="74" height="8" rx="4" fill="#1E293B" />
+  <rect x="360" y="202" width="58" height="8" rx="4" fill="#1E293B" />
+
+  <!-- Central Bold Medical Blood Droplet -->
+  <path d="M 256 112 C 256 112 186 208 186 256 C 186 295 217 322 256 322 C 295 322 326 295 326 256 C 326 208 256 112 256 112 Z" fill="url(#dropGrad2)" />
+
+  <!-- Continuous Vital ECG Pulse running across the screen through the drop -->
+  <!-- Left incoming pulse line -->
+  <path d="M 70 256 L 160 256 L 174 238 L 186 256" fill="none" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7" />
+  
+  <!-- Central White ECG Inside Drop -->
+  <path d="M 186 256 L 218 256 L 234 216 L 254 290 L 272 232 L 284 256 L 326 256" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Right outgoing pulse line -->
+  <path d="M 326 256 L 340 238 L 354 256 L 442 256" fill="none" stroke="#38BDF8" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7" />
+
+  <!-- Highlight Reflection on Drop -->
+  <path d="M 220 220 C 212 234 212 254 217 268" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity="0.5" />
+</svg>

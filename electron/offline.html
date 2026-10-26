@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظام إدارة بنك الدم المركزي — نفير (وضع أوفلاين)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Cairo", "Tahoma", sans-serif;
+    }
+    body {
+      background-color: #0B0F19;
+      color: #F8FAFC;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      user-select: none;
+    }
+    .card {
+      background: #111827;
+      border: 1px solid #1F2937;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+    .logo-container {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      background: rgba(220, 38, 38, 0.1);
+      border: 1px solid rgba(220, 38, 38, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      fill: #DC2626;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(245, 158, 11, 0.1);
+      color: #F59E0B;
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #F59E0B;
+    }
+    p {
+      color: #94A3B8;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    button {
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-primary {
+      background: #DC2626;
+      color: #FFFFFF;
+      border: none;
+    }
+    .btn-primary:hover {
+      background: #B91C1C;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: #94A3B8;
+      border: 1px solid #334155;
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: #F8FAFC;
+    }
+    .hint {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #64748B;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo-container">
+      <svg class="logo-icon" viewBox="0 0 24 24">
+        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+      </svg>
+    </div>
+    <h1>نظام إدارة بنك الدم المركزي — نفير</h1>
+    <div class="badge">
+      <span class="dot"></span>
+      <span>الوضع المحلي دون اتصال بالإنترنت</span>
+    </div>
+    <p>
+      تعذر الاتصال بالسيرفر السحابي نظراً لعدم توفر إنترنت حالياً. بمجرد فتح البيانات أو الاتصال بالشبكة، سيعاد توجيهك تلقائياً إلى النظام السحابي.
+    </p>
+    <div class="actions">
+      <button class="btn-primary" onclick="retryConnection()">
+        <span>إعادة المحاولة والاتصال بالخادم</span>
+      </button>
+      <button class="btn-secondary" onclick="checkLocalServer()">
+        <span>تشغيل في الوضع المحلي (Local Host)</span>
+      </button>
+    </div>
+    <div class="hint">
+      سيتم إعادة الاتصال تلقائياً فور توفر شبكة الإنترنت.
+    </div>
+  </div>
+
+  <script>
+    function retryConnection() {
+      if (window.electronAPI && window.electronAPI.retryServer) {
+        window.electronAPI.retryServer();
+      } else {
+        window.location.href = "https://nafeer-web-production.up.railway.app";
+      }
+    }
+
+    function checkLocalServer() {
+      if (window.electronAPI && window.electronAPI.loadLocalServer) {
+        window.electronAPI.loadLocalServer();
+      } else {
+        window.location.href = "http://127.0.0.1:3000";
+      }
+    }
+
+    // الكشف التلقائي عن عودة الإنترنت والتحويل الفوري للسيرفر السحابي
+    window.addEventListener("online", () => {
+      retryConnection();
+    });
+  </script>
+</body>
+</html>
