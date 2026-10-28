@@ -13,8 +13,8 @@ if (!gotTheLock) {
 let mainWindow = null;
 let localServerProcess = null;
 
-// الرابط الإنتاجي المركزي المباشر على Railway (أو الرابط المحلي أثناء التطوير)
-const DEFAULT_URL = process.env.NAFEER_APP_URL || "https://nafeer-web-production.up.railway.app";
+// الرابط الإنتاجي المركزي المباشر على Render (دائم ومجاني للأبد)
+const DEFAULT_URL = process.env.NAFEER_APP_URL || "https://nafeer-blood-bank.onrender.com";
 const OFFLINE_HTML_PATH = path.join(__dirname, "offline.html");
 
 function checkPort(port) {
